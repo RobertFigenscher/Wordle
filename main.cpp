@@ -8,13 +8,15 @@ using namespace std;
 int main()
 {
     int total = 0;
+    string wordOfGame;
     vector<string> words;
     ifstream inputFile;
     inputFile.open("words.txt");
     string line;
     srand(time(0));
     while (getline(inputFile, line)) words.push_back(line);
-     cout << words[rand() % words.size()] << endl;
+    wordOfGame = words[rand() % words.size()];
+    cout << wordOfGame << endl;
 
     return 0;
 } 
