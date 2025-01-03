@@ -10,7 +10,7 @@ int main()
     int total = 0;
     ifstream inputFile;
     inputFile.open("words.txt");
-    
+    cout << total << endl;
 
 
     return 0;
