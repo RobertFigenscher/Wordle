@@ -25,6 +25,8 @@ int main()
         cout << "Invalid input, try again." << endl;
         cin >> userWord; 
     }
+    if (userWord[0] == wordOfGame[0])
+    cout << "Same first letter!" << endl;
 
 
 
