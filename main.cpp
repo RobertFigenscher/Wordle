@@ -14,6 +14,7 @@ int main()
     inputFile.open("words.txt");
     string line;
     string userWord;
+    bool flag1;
     srand(time(0));
     while (getline(inputFile, line)) words.push_back(line);
     wordOfGame = words[rand() % words.size()];
@@ -26,9 +27,19 @@ int main()
         cin >> userWord; 
     }
     if (userWord[0] == wordOfGame[0])
-    cout << "Same first letter!" << endl;
-
-
+        cout << "Same first letter!" << endl;
+    else 
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            if (userWord[0] == wordOfGame[i])
+               flag1 = true;
+        }
+        if (flag1)
+            cout << "letter is in word" << endl;
+        else 
+            cout << "letter is not in word" << endl;
+    }
 
     return 0;
 } 
