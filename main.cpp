@@ -30,9 +30,23 @@ int main()
         cout << "Same first letter!" << endl;
     else 
     {
-        for (int i = 1; i <= 5; i++)
+        for (int i = 0; i <= 5; i++)
         {
             if (userWord[0] == wordOfGame[i])
+               flag1 = true;
+        }
+        if (flag1)
+            cout << "letter is in word" << endl;
+        else 
+            cout << "letter is not in word" << endl;
+    } 
+    if (userWord[1] == wordOfGame[1])
+        cout << "Same second letter!" << endl;
+    else 
+    {
+        for (int i = 0; i <= 5; i++)
+        {
+            if (userWord[1] == wordOfGame[i])
                flag1 = true;
         }
         if (flag1)
