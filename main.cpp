@@ -88,7 +88,7 @@ int main()
             }
 
              if (userWord[3] == wordOfGame[3])
-                cout << "Same fourth letter!" << endl;
+                cout << " " << wordOfGame[3] << " " << endl;
               else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -97,13 +97,13 @@ int main()
                         flag4 = true;
                 }
                 if (flag4)
-                    cout << "letter is in word" << endl;
+                    cout << "[" << userWord[3] << "]" << endl;
                 else 
-                    cout << "letter is not in word" << endl;
+                    cout << "[!]" << endl;
             }
 
             if (userWord[4] == wordOfGame[4])
-                cout << "Same fifth letter!" << endl;
+                cout << wordOfGame[4] << endl;
             else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -112,9 +112,9 @@ int main()
                         flag5 = true;
                 }
             if (flag5)
-                cout << "letter is in word" << endl;
+                cout << "[" << userWord[4] << "]" << endl;
             else 
-                cout << "letter is not in word" << endl;
+                cout << "[!]" << endl;
             }
         }
     }
