@@ -99,7 +99,7 @@ int main()
                         flag4 = true;
                 }
                 if (flag4)
-                    cout << " [" << userWord[3] << "] ";
+                    cout << "[" << userWord[3] << "]";
                 else 
                     cout << " [!] ";
             }
