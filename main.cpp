@@ -18,27 +18,30 @@ int main()
     while (getline(inputFile, line)) words.push_back(line); 
     inputFile.close();
     wordOfGame = words[rand() % words.size()]; 
-    cout << "Intente encontrar la palabra de cinco letras en menos de 5 intentos" << endl;
+    cout << "Try to guess a random five letter word in five tries or less." << endl;
+    cout << "If a letter appears in brackets, it's in the word, but in some other space." << endl;
+    cout << "If an exclamation point shows up in brackets, then the letter does not appear in the word." << endl;
+    cout << "If the letter appears without brackets, it is in the word in that space." << endl;
     for(int tries = 1; tries<= 5; tries++)
     {
-        cout << "intento: " << tries << endl;
+        cout << "Attempt: " << tries << endl;
         cout << wordOfGame << endl;
-        cout <<"Ingrese su intento: ";
+        cout <<"Enter a word:";
         cin >> userWord; 
         cout << endl; 
 
         while (userWord.length() != 5) 
         {
             cout << "Invalid input, try again." << endl;
+            cout << "Enter a word:";
             cin >> userWord; 
-            cin >> userWord; 
-            cin >> userWord;
+            cout << endl;
         } 
         if (userWord == wordOfGame) 
         {
             win = true; 
             tries = 6;
-            cout << "Ganaste!" << endl; 
+            cout << "You win!" << endl; 
         }
         else 
         {
@@ -122,8 +125,8 @@ int main()
     }
     if (win == false)
     {
-        cout << "Se te han acabado los intentos." << endl;
-        cout << "La palabra es " << wordOfGame << "." << endl;
+        cout << "You have no more tries. You lose." << endl;
+        cout << "The word was " << wordOfGame << "." << endl;
     }
 
 
