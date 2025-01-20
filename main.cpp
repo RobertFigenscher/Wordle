@@ -13,7 +13,7 @@ int main()
     inputFile.open("words.txt");
     string line;
     string userWord;
-    bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false, win = false;
+    bool win = false;
     srand(time(0));
     while (getline(inputFile, line)) words.push_back(line); 
     inputFile.close();
@@ -42,6 +42,8 @@ int main()
         }
         else 
         {
+            bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
+
             if (userWord[0] == wordOfGame[0])
                 cout << " " << wordOfGame[0] << " ";
             else 
@@ -103,7 +105,7 @@ int main()
             }
 
             if (userWord[4] == wordOfGame[4])
-                cout << wordOfGame[4] << endl;
+                cout << wordOfGame[4] << endl << endl;
             else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -112,9 +114,9 @@ int main()
                         flag5 = true;
                 }
             if (flag5)
-                cout << "[" << userWord[4] << "]" << endl;
+                cout << "[" << userWord[4] << "]" << endl << endl;
             else 
-                cout << "[!]" << endl;
+                cout << "[!]" << endl << endl;
             }
         }
     }
