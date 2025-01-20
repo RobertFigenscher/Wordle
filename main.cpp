@@ -43,7 +43,7 @@ int main()
         else 
         {
             if (userWord[0] == wordOfGame[0])
-                cout << " " << wordOfGame[0] << " " << endl;
+                cout << " " << wordOfGame[0] << " ";
             else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -52,13 +52,13 @@ int main()
                         flag1 = true;
                 }
                 if (flag1)
-                    cout << "[" << userWord[0] << "]" << endl;
+                    cout << "[" << userWord[0] << "]";
                 else 
-                    cout << "[!]" << endl;
+                    cout << "[!]";
             } 
 
             if (userWord[1] == wordOfGame[1])
-                cout << " " << wordOfGame[1] << " " << endl;
+                cout << " " << wordOfGame[1] << " ";
             else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -67,13 +67,13 @@ int main()
                         flag2 = true;
                  }
             if (flag2)
-                cout << "[" << userWord[1] << "]" << endl;
+                cout << "[" << userWord[1] << "]";
             else 
-                cout << "[!]" << endl;
+                cout << "[!]";
             }
 
             if (userWord[2] == wordOfGame[2])
-              cout << " " << wordOfGame[2] << " " << endl;
+              cout << " " << wordOfGame[2] << " ";
             else 
             {
                for (int i = 0; i <= 5; i++)
@@ -82,13 +82,13 @@ int main()
                         flag3 = true;
                 }
                 if (flag3)
-                    cout << "[" << userWord[2] << "]" << endl;
+                    cout << "[" << userWord[2] << "]";
                 else 
-                    cout << "[!]" << endl;
+                    cout << "[!]";
             }
 
              if (userWord[3] == wordOfGame[3])
-                cout << " " << wordOfGame[3] << " " << endl;
+                cout << " " << wordOfGame[3] << " ";
               else 
             {
                 for (int i = 0; i <= 5; i++)
@@ -97,9 +97,9 @@ int main()
                         flag4 = true;
                 }
                 if (flag4)
-                    cout << "[" << userWord[3] << "]" << endl;
+                    cout << "[" << userWord[3] << "]";
                 else 
-                    cout << "[!]" << endl;
+                    cout << "[!]";
             }
 
             if (userWord[4] == wordOfGame[4])
