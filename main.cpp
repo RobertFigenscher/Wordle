@@ -25,7 +25,6 @@ int main()
     for(int tries = 1; tries<= 5; tries++)
     {
         cout << "Attempt: " << tries << endl;
-        cout << wordOfGame << endl;
         cout <<"Enter a word:";
         cin >> userWord; 
         cout << endl; 
