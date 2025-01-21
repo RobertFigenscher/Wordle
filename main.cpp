@@ -145,11 +145,17 @@ int main()
                 }
             }
         }
+
+        //si el usuario no ingresa la palabra correcta y agota sus seis intento
         if (win == false)
         {
+
+            //desplagarle al usuario que perdió y mostrarle la palabra aleatorea
             cout << "You have no more tries. You lose." << endl;
             cout << "The word was " << wordOfGame << "." << endl;
         }
+
+        //preguntarle al usuario si desea jugar nuevamente
         cout << "To play again, enter y" << endl;
         cin >> choice;
         if (choice == 'y' || choice == 'Y')
