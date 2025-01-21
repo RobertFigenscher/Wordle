@@ -18,11 +18,11 @@ int main()
     while (getline(inputFile, line)) words.push_back(line); 
     inputFile.close();
     wordOfGame = words[rand() % words.size()]; 
-    cout << "Try to guess a random five letter word in five tries or less." << endl;
+    cout << "Try to guess a random five letter word in six tries or less." << endl;
     cout << "If a letter appears in brackets, it's in the word, but in some other space." << endl;
     cout << "If an exclamation point shows up in brackets, then the letter does not appear in the word." << endl;
     cout << "If the letter appears without brackets, it is in the word in that space." << endl;
-    for(int tries = 1; tries<= 5; tries++)
+    for(int tries = 1; tries<= 6; tries++)
     {
         cout << "Attempt: " << tries << endl;
         cout <<"Enter a word:";
@@ -39,7 +39,7 @@ int main()
         if (userWord == wordOfGame) 
         {
             win = true; 
-            tries = 6;
+            tries = 7;
             cout << "You win!" << endl; 
         }
         else 
