@@ -26,23 +26,27 @@ int main()
         //definir variable flag para confirmar si el usuario ganó o no
         bool win = false;
 
-
+        //elegir palabra aleatorea de la lista de palabras en el archivo
         srand(time(0));
         while (getline(inputFile, line)) words.push_back(line); 
         inputFile.close();
         wordOfGame = words[rand() % words.size()]; 
+
+        //desplegar instrucciones para el usuario
         cout << "Try to guess a random five letter word in six tries or less." << endl;
         cout << "If a letter appears in brackets, it's in the word, but in some other space." << endl;
         cout << "If an exclamation point shows up in brackets, then the letter does not appear in the word." << endl;
         cout << "If the letter appears without brackets, it is in the word in that space." << endl;
         cout << "ONLY USE LOWERCASE LETTERS" << endl;
         for(int tries = 1; tries<= 6; tries++)
-        {
+        { 
+            //mostrarle al usuario el intento por el cual va y pedirle que ingrese una palabra
             cout << "Attempt: " << tries << endl;
             cout <<"Enter a word:";
             cin >> userWord; 
             cout << endl; 
 
+            //verificar que el largo de la palabra ingresada por el usuario sea válido
             while (userWord.length() != 5) 
             {
                 cout << "Invalid input, try again." << endl;
@@ -50,16 +54,21 @@ int main()
                 cin >> userWord; 
                 cout << endl;
             } 
+
+            //Si el usario ingresa la palabra correcta
             if (userWord == wordOfGame) 
             {
                 win = true; 
                 tries = 7;
+
+                //desplegar que ha ganado
                 cout << "You win!" << endl; 
             }
+
+            //si el usuario no ingresa la palabra correcta y le quedan intentos, evaluar cada letra de la palabra ingresada
             else 
             {
                 bool flag1 = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
-                
                 if (userWord[0] == wordOfGame[0])
                     cout << " " << wordOfGame[0] << " ";
                 else 
