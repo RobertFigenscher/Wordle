@@ -9,7 +9,7 @@ int main()
 {
     bool play = true;
     char choice;
-    if(play)
+    while(play)
     {
         play = false;
         string wordOfGame;
@@ -27,6 +27,7 @@ int main()
         cout << "If a letter appears in brackets, it's in the word, but in some other space." << endl;
         cout << "If an exclamation point shows up in brackets, then the letter does not appear in the word." << endl;
         cout << "If the letter appears without brackets, it is in the word in that space." << endl;
+        cout << "ONLY USE LOWERCASE LETTERS" << endl;
         for(int tries = 1; tries<= 6; tries++)
         {
             cout << "Attempt: " << tries << endl;
@@ -136,6 +137,6 @@ int main()
         cin >> choice;
         if (choice == 'y' || choice == 'Y')
             play = true;
-    }
+    } 
     return 0;
 }
