@@ -6,7 +6,8 @@
 using namespace std; 
 
 int main()
-{
+{   
+    //definir variables flag para poder reiniciar el juego
     bool play = true;
     char choice;
     while(play)
@@ -14,11 +15,18 @@ int main()
         play = false;
         string wordOfGame;
         vector<string> words;
+
+        //abrir archivo de palabras
         ifstream inputFile;
         inputFile.open("words.txt");
+
         string line;
         string userWord;
+
+        //definir variable flag para confirmar si el usuario ganó o no
         bool win = false;
+
+
         srand(time(0));
         while (getline(inputFile, line)) words.push_back(line); 
         inputFile.close();
